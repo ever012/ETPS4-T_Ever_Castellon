@@ -2125,11 +2125,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\computadora\\Desktop\\api rest net core 6 c#\\APILibMonsRomeroDB\\APILibMonsRomeroDB\\APILibMonsRomeroDB.csproj",
+      "projectUniqueName": "C:\\Users\\computadora\\Desktop\\clases-ETPS4-T NORMAS Y ESTÁNDARES INTERNACIONALES\\ETPS4-T_Ever_Castellon\\api rest net core 6 c#\\APILibMonsRomeroDB\\APILibMonsRomeroDB\\APILibMonsRomeroDB.csproj",
       "projectName": "APILibMonsRomeroDB",
-      "projectPath": "C:\\Users\\computadora\\Desktop\\api rest net core 6 c#\\APILibMonsRomeroDB\\APILibMonsRomeroDB\\APILibMonsRomeroDB.csproj",
+      "projectPath": "C:\\Users\\computadora\\Desktop\\clases-ETPS4-T NORMAS Y ESTÁNDARES INTERNACIONALES\\ETPS4-T_Ever_Castellon\\api rest net core 6 c#\\APILibMonsRomeroDB\\APILibMonsRomeroDB\\APILibMonsRomeroDB.csproj",
       "packagesPath": "C:\\Users\\computadora\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\computadora\\Desktop\\api rest net core 6 c#\\APILibMonsRomeroDB\\APILibMonsRomeroDB\\obj\\",
+      "outputPath": "C:\\Users\\computadora\\Desktop\\clases-ETPS4-T NORMAS Y ESTÁNDARES INTERNACIONALES\\ETPS4-T_Ever_Castellon\\api rest net core 6 c#\\APILibMonsRomeroDB\\APILibMonsRomeroDB\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\computadora\\AppData\\Roaming\\NuGet\\NuGet.Config",

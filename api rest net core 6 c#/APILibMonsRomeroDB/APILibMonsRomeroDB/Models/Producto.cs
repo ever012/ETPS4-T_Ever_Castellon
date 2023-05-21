@@ -13,5 +13,6 @@ namespace APILibMonsRomeroDB.Models
         public string? ESTADO { get; set; }
         public decimal? precio_venta { get; set; }
 
+
     }
 }

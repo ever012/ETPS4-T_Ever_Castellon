@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/YjFD66Cn/9d3JizENwG3x0fwwQDAXIm4M/J+jr2SLSoU24zEfnj9rHTHTIBoByvuIsEo8mmLe6Py8+EbvH7zg==",
+  "dgSpecHash": "6DkowrsMieIktuLmQ04fo/xic9y18vi3tdgDoD3tGqph/CzlAWocTwXMoji5iWU8AfyWl4KEhh7pOWq5bHqZKQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\computadora\\Desktop\\api rest net core 6 c#\\APILibMonsRomeroDB\\APILibMonsRomeroDB\\APILibMonsRomeroDB.csproj",
+  "projectFilePath": "C:\\Users\\computadora\\Desktop\\clases-ETPS4-T NORMAS Y ESTÁNDARES INTERNACIONALES\\ETPS4-T_Ever_Castellon\\api rest net core 6 c#\\APILibMonsRomeroDB\\APILibMonsRomeroDB\\APILibMonsRomeroDB.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\computadora\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\computadora\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.16\\microsoft.aspnetcore.authentication.jwtbearer.6.0.16.nupkg.sha512",

@@ -1,0 +1,66 @@
+
+- Toda API que no es de acceso publico debe tener un metodo de seguridad por medio de token's
+
+*controlador compras
+direccion/compras/listar
+
+-Autenticacion usando Json Web Token (JWT)
+1.1 solo los usuarios registrados usen la api
+1.2 solo los admins tengan acceso a borrar datos (API)
+
+-en appsettings.json
+"jwt": {
+        "key" = llave privada
+		"Issuer" = para la ruta del servidor donde se publica la api
+		"Audience" = para la ruta del servidor donde de los que van a consumir las api
+        "Subject" = texto cualquiera o aleatorio
+    }
+
+
+*PAQUETES NuGet usados
+-Microsoft.AspNetCore.Authentication.JwtBearer 6.0.16
+-Microsoft.EntityFrameworkCore.Tools 7.0.5
+-Newtonsoft.Json 13.0.3
+-Swashbuckle.AspNetCore 6.2.3
+-Swashbuckle.AspNetCore.Swagger 6.5.0
+
+
+*CONFIGURACION DE ARCHIVO Program.cs
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    options.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidateIssuer = true, //puede ser false
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],  //se usan variables del archivo appsettings.json
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:key"])) //aqui se usa la llave privada
+    };
+});
+
+var app = builder.Build();
+
+******====== Y TAMBIEN SE AGREGO LO SIGUENTE
+"
+app.UseAuthorization();
+
+app.UseAuthentication();
+
+
+app.MapControllers();
+
+"
+
+
+
+
+
+
+
+
+
+

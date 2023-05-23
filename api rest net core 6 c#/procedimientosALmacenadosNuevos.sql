@@ -198,6 +198,7 @@ go
 
 CREATE PROCEDURE sp_Actualizar_Producto
 (
+@id_producto int,
 @nombre_producto varchar(100),
 @id_categoria int,
 @precio decimal,
@@ -208,7 +209,7 @@ CREATE PROCEDURE sp_Actualizar_Producto
 )
 AS
 BEGIN
-	UPDATE producto SET nombre_producto=@nombre_producto,id_categoria=@id_categoria,precio=@precio,descripcion=@descripcion,ESTADO=@ESTADO, precio_venta=@cantidad WHERE id_producto=@precio_venta
+	UPDATE producto SET nombre_producto=@nombre_producto,id_categoria=@id_categoria,precio=@precio,descripcion=@descripcion,ESTADO=@ESTADO, precio_venta=@cantidad WHERE id_producto=@id_producto
 END
 go
 

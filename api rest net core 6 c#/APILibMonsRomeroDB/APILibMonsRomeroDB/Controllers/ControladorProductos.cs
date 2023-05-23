@@ -116,12 +116,13 @@ namespace APILibMonsRomeroDB.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPatch]
         [Route("actualizarProducto")]
         public dynamic actualizarProducto(Producto producto)
         {
             List<Parametro> parametros = new List<Parametro>
             {
+                new Parametro("@id_producto", producto.id_producto.ToString()),
                 new Parametro("@nombre_producto", producto.nombre_producto), //como ya es string noo es necesario convertirlo
                 new Parametro("@id_categoria", producto.id_categoria.ToString()),
                 new Parametro("@precio", producto.precio.ToString()),

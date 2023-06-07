@@ -8,6 +8,8 @@
         public int? cantidad { get; set; }
         public decimal? total { get; set; }
         public string? fecha { get; set; }
+        public string? nombre_producto { get; set; }
+        public decimal? precio { get; set; }
     }
 
 

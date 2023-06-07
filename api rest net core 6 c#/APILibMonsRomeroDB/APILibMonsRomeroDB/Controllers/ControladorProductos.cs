@@ -36,8 +36,6 @@ namespace APILibMonsRomeroDB.Controllers
         }
 
 
-
-
         [HttpPost]
         [Route("agregarProducto")]
         public dynamic agregarProducto(Producto producto)

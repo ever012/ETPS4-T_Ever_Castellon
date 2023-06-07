@@ -1,3 +1,10 @@
+CREATE PROCEDURE sp_ver_categorias
+AS
+BEGIN
+	SELECT * FROM categoria
+END
+go
+
 CREATE PROCEDURE sp_Agregar_categoria
 (
 @nombCate nvarchar(50),
@@ -22,6 +29,20 @@ BEGIN
 	UPDATE categoria SET nombCate= @nombCate,descripcionCate= @descripcionCate, ESTADO= @ESTADO WHERE id_categoria = @id_categoria
 END
 go
+
+
+CREATE PROCEDURE sp_Eliminar_Categoria
+@id int
+as
+begin
+	delete from categoria where id_categoria = @id;
+	select 'se eliminó categoria' as Mensaje
+END
+go
+
+
+
+
 
 CREATE PROCEDURE sp_agregar_compra
 (
@@ -68,6 +89,20 @@ BEGIN
 END
 go
 
+CREATE PROCEDURE sp_listarMovimientos
+AS
+BEGIN
+	SELECT * FROM Movimiento
+END
+go
+
+CREATE PROCEDURE sp_listarMovimientosConProductos
+AS
+BEGIN
+	SELECT b.*, a.nombre_producto,a.precio FROM producto AS a inner join Movimiento AS b ON b.id_producto = a.id_producto;
+END
+go
+
 CREATE PROCEDURE sp_Insertar_Movimiento
 (
 @id_producto int,
@@ -80,6 +115,15 @@ AS
 BEGIN
 	INSERT INTO MOVIMIENTO(id_producto,TipoMovi,cantidad,total,fecha)
     VALUES(@id_producto,@TipoMovi,@cantidad,@total,@fecha)
+END
+go
+
+ALTER PROCEDURE sp_Eliminar_Movimiento
+@id int
+as
+begin
+	delete from Movimiento where Id_Movimiento = @id;
+	select 'se eliminó Movimiento' as Mensaje
 END
 go
 
@@ -199,19 +243,23 @@ go
 CREATE PROCEDURE sp_Actualizar_Producto
 (
 @id_producto int,
-@nombre_producto varchar(100),
+@nombre_producto varchar(50),
 @id_categoria int,
-@precio decimal,
-@descripcion varchar(500),
+@precio money,
+@descripcion varchar(100),
 @ESTADO varchar(1),
 @cantidad int,
-@precio_venta decimal
+@precio_venta money
 )
 AS
 BEGIN
-	UPDATE producto SET nombre_producto=@nombre_producto,id_categoria=@id_categoria,precio=@precio,descripcion=@descripcion,ESTADO=@ESTADO, precio_venta=@cantidad WHERE id_producto=@id_producto
+
+	UPDATE producto SET nombre_producto=@nombre_producto,id_categoria=@id_categoria,precio=@precio,descripcion=@descripcion,ESTADO=@ESTADO ,cantidad=@cantidad ,precio_venta=@precio_venta WHERE id_producto=@id_producto
+	select @precio
 END
 go
+select * from categoria
+
 
 CREATE PROCEDURE sp_Insertar_Proveedor
 (

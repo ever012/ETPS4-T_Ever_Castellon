@@ -6,8 +6,8 @@ namespace APILibMonsRomeroDB.Recursos
 {
     public class DBDatos
     {
-        //public static string cadenaConexion = "Data Source=DESKTOP-SDSN0NM\\SQLEXPRESS;Initial Catalog=Lib_MonseñorRomero; Integrated Security = True";
-        public static string cadenaConexion = "Data Source=DESKTOP-SDSN0NM\\SQLEXPRESS;Initial Catalog=Lib_MonseñorRomero;User ID=ever;Password=qY698P&cadPg";
+        public static string cadenaConexion = "Data Source=DESKTOP-SDSN0NM\\SQLEXPRESS;Initial Catalog=Lib_MonseñorRomero; Integrated Security = True";
+        //public static string cadenaConexion = "Data Source=DESKTOP-SDSN0NM\\SQLEXPRESS;Initial Catalog=Lib_MonseñorRomero;User ID=ever;Password=qY698P&cadPg";
         public static DataSet ListarTablas(string nombreProcedimiento, List<Parametro> parametros = null) //esta es para cuando el procedimiento almacenado debe listar mas de una tabla
         {
             SqlConnection conexion = new SqlConnection(cadenaConexion); 
